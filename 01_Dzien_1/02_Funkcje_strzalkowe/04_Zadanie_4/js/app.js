@@ -1,18 +1,33 @@
-const App = function () {
-  this.websites = ["google", "twitter", "facebook"];
-  this.links = [];
-};
+document.addEventListener("DOMContentLoaded", function () {
 
-App.prototype.generateLinks = function () {
+    const menu = document.getElementById("menu");
 
-};
 
-App.prototype.insertLinks = function () {
+    const App = function () {
+        this.websites = ["google", "twitter", "facebook"];
+        this.links = [];
+    };
 
-};
+    App.prototype.generateLinks = function () {
+        this.websites.forEach(el => {
+            this.links.push(`www.${el}.com`)
+        })
+    };
 
-const app = new App();
-app.generateLinks();
-app.insertLinks();
+    App.prototype.insertLinks = function () {
+        this.links.forEach(el => {
+                const li = document.createElement("li")
+                li.innerHTML = `<a href=${el}>${el}</a>`
+                menu.appendChild(li);
+            }
+        )
+    };
 
-console.log(app.links);
+    const app = new App();
+    app.generateLinks();
+    app.insertLinks();
+
+    console.log(app.links);
+
+
+});
