@@ -2,7 +2,7 @@ const path = require("path");
 const autoprefixer = require('autoprefixer');
 const Html = require('html-webpack-plugin');
 
-const entryPath = "01_Dzien_1/02_Funkcje_strzalkowe/04_Zadanie_4";
+const entryPath = "03_Dzien_2/05_Export_i_import/02_Zadanie_2";
 
 module.exports = {entry: `./${entryPath}/js/app.js`,
     output: {
