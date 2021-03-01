@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import animals from './data/animals';
+
+
 
 ReactDOM.render(
-  <h1>Hello, World!</h1>,
-  document.getElementById("app")
+    <section>
+        <p>Tablica animals zawiera {animals.length} elementów : {animals.join(", ")}</p>
+    </section>,
+    document.getElementById("app")
 );

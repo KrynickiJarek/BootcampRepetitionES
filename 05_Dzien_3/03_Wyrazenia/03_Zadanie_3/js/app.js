@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import person from './data/person';
 
 ReactDOM.render(
-  <h1>Hello, World!</h1>,
+    <ul>
+        <li>{person.title}</li>
+        <li>{person.firstName}</li>
+        <li>{person.lastName}</li>
+        <li>{person.age}</li>
+    </ul>,
   document.getElementById("app")
 );
