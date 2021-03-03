@@ -1,7 +1,32 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 
+
+class ClassSearch extends Component {
+    render() {
+        return (
+            <div>
+            <input/>
+            <button>Wyszukaj</button>
+            </div>
+        );
+    }
+}
+
+const FunctionSearch = () => {
+    return (
+        <div>
+            <input/>
+            <button>Wyszukaj</button>
+        </div>
+    )
+}
+
+
 ReactDOM.render(
-  <h1>Hello, World!</h1>,
-  document.getElementById("app")
+    <>
+        <ClassSearch/>
+        <FunctionSearch/>
+    </>,
+    document.getElementById("app")
 );
